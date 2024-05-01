@@ -21,30 +21,35 @@ h1{
 header{
     width: 100%;
     overflow: hidden;
-    position: relative;
+    position: fixed;
     top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     height: 160px;
+    z-index: 3;
 }
 
 footer{
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-around;
     height: 64px;
     background-color: lawngreen;
+    z-index: 3;
 }
 
 .tickerbackground{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 160px;
     background-color: lawngreen;
+    z-index: 3;
 }
 .ticker {
     position: absolute;
@@ -58,10 +63,23 @@ footer{
 }
 
 main{
+    position: fixed;
     background-image: url(images/mainmap.png);
-    padding-top: 160px;
-    height: 100%;
+    height: 832px;
+    width: 1280px;
+    margin: auto;
+    background-size: contain;
+    image-rendering: pixelated;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    margin-top: 200px;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 600px){ 
+    main{
+        height: 208px;
+        width: 320px;
+        margin-top: 300px;
+        margin-left: 10px;
+    }
 }
