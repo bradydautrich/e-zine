@@ -17,6 +17,18 @@ h1{
     font-style: normal;
 }
 
+.text{
+    font-size: 30px;
+    width: 50%;
+    padding-left: 16px;
+}
+.PAtext{
+    font-size: 30px;
+    width: 50%;
+    padding-left: 16px;
+    color: white;
+}
+
 header{
     width: 100%;
     overflow: hidden;
@@ -52,10 +64,11 @@ footer{
     background-color: lawngreen;
     z-index: 3;
 }
-.ticker {
+.ticker{
     position: absolute;
     white-space: nowrap;
     animation: ticker-animation 10s linear infinite;
+    overflow: visible;
 }
 
 @keyframes ticker-animation {
@@ -77,6 +90,8 @@ main{
 }
 
 .NEmain{
+    display: flex;
+    justify-content: flex-end;
     position: fixed;
     background-image: url(images/North\ East\ US.png);
     height: 768px;
@@ -89,6 +104,8 @@ main{
     z-index: 1;
 }
 .PAmain{
+    display: flex;
+    justify-content: flex-start;
     position: fixed;
     background-image: url(images/Home.png);
     height: 768px;
@@ -101,6 +118,8 @@ main{
     z-index: 1;
 }
 .SFmain{
+    display: flex;
+    justify-content: end;
     position: fixed;
     background-image: url(images/California.png);
     height: 768px;
@@ -113,6 +132,8 @@ main{
     z-index: 1;
 }
 .PTmain{
+    display: flex;
+    justify-content: end;
     position: fixed;
     background-image: url(images/Iberian\ Peninsula.png);
     height: 768px;
@@ -125,6 +146,8 @@ main{
     z-index: 1;
 }
 .JPmain{
+    display: flex;
+    justify-content: end;
     position: fixed;
     background-image: url(images/Japan.png);
     height: 768px;
@@ -137,6 +160,8 @@ main{
     z-index: 1;
 }
 .INmain{
+    display: flex;
+    justify-content: end;
     position: fixed;
     background-image: url(images/India.png);
     height: 768px;
@@ -149,6 +174,8 @@ main{
     z-index: 1;
 }
 .BRmain{
+    display: flex;
+    justify-content: end;
     position: fixed;
     background-image: url(images/Brazil.png);
     height: 768px;
@@ -161,15 +188,23 @@ main{
     z-index: 1;
 }
 .PA{
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
     background-color: coral;
     position: fixed;
     top: 560px;
     left: 250px;
 }
+.Lisboa{
+    width: 24px;
+    height: 24px;
+    background-color: coral;
+    position: fixed;
+    top: 490px;
+    left: 150px;
+}
 .PA:hover{
-    transform: scale(150%);
+    transform: scale(200%);
 }
 
 a{
@@ -237,22 +272,22 @@ a:visited{
     left: 350px;
 }
 .NE:hover{
-    transform: scale(150%);
+    transform: scale(200%);
 }
 .SF:hover{
-    transform: scale(150%);
+    transform: scale(200%);
 }
 .PT:hover{
-    transform: scale(150%);
+    transform: scale(200%);
 }
 .IN:hover{
-    transform: scale(150%);
+    transform: scale(200%);
 }
 .JP:hover{
-    transform: scale(150%);
+    transform: scale(200%);
 }
 .BR:hover{
-    transform: scale(150%);
+    transform: scale(200%);
 }
 @media only screen and (max-width: 600px){ 
     main{
@@ -260,6 +295,18 @@ a:visited{
         width: 320px;
         margin-top: 300px;
         margin-left: 10px;
+    }
+
+    .text{
+        padding-top: 165px;
+        width: 100%;
+        font-size: 16px;
+    }
+    .PAtext{
+        padding-top: 165px;
+        width: 100%;
+        font-size: 16px;
+        color: black;
     }
     .NE{
         width: 12px;
@@ -299,9 +346,65 @@ a:visited{
     .BR{
         width: 12px;
         height: 12px;
-        background-color: coral;
-        position: fixed;
         top: 410px;
         left: 115px;
+    }
+    .PA{
+        width: 12px;
+        height: 12px;
+        top: 420px;
+        left: 85px;
+    }
+    .Lisboa{
+        width: 12px;
+        height: 12px;
+        top: 400px;
+        left: 55px;
+    }
+    .NEmain{
+        height: 208px;
+        width: 320px;
+        margin-top: 300px;
+        margin-left: 10px;
+    }
+    .PAmain{
+        height: 208px;
+        width: 320px;
+        margin-top: 300px;
+        margin-left: 10px;
+    }
+    .SFmain{
+        height: 208px;
+        width: 320px;
+        margin-top: 300px;
+        margin-left: 10px;
+    }
+    .PTmain{
+        height: 208px;
+        width: 320px;
+        margin-top: 300px;
+        margin-left: 10px;
+    }
+    .JPmain{
+        height: 208px;
+        width: 320px;
+        margin-top: 300px;
+        margin-left: 10px;
+    }
+    .INmain{
+        height: 208px;
+        width: 320px;
+        margin-top: 300px;
+        margin-left: 10px;
+    }
+    .BRmain{
+        height: 208px;
+        width: 320px;
+        margin-top: 300px;
+        margin-left: 10px;
+    }
+
+    .ticker{
+        animation: ticker-animation 5s linear infinite;
     }
 }
